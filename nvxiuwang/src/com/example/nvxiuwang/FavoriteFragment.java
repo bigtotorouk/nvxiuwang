@@ -1,47 +1,43 @@
 package com.example.nvxiuwang;
 
+import java.util.List;
+
+import net.tsz.afinal.FinalDb;
+
 import com.example.nvxiuwang.adapter.ImageModelAdapter;
+import com.example.nvxiuwang.adapter.ImageModelGridAdapter;
 import com.example.nvxiuwang.bean.ImageModel;
-import com.example.nvxiuwang.bean.ImageModelResponse;
-import com.example.nvxiuwang.xlist.BasicPageResponse;
-import com.example.nvxiuwang.xlist.PageListFragment;
-import com.google.gson.Gson;
+
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
+import android.widget.ListView;
 
 
-public class FavoriteFragment extends PageListFragment<ImageModel> {
-
-	@Override
-	public void initParams(){
-		url = "http://52pic.com/api/man/new";
-		_L_PAGE = "renum";
-		_L_PAGE_SIZE = "num";
-		pageSize = 10;
-		
-		_pageAdapter = new ImageModelAdapter(FavoriteFragment.this.getActivity());
-	}
+public class FavoriteFragment extends Fragment {
+	private GridView mListView;
+	private ImageModelGridAdapter pageAdapter;
+	FinalDb db;
 	
 	@Override
-	public View onCreatePageView(LayoutInflater inflater, ViewGroup container,
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.frag_favorite, container, false);
+		pageAdapter = new ImageModelGridAdapter(FavoriteFragment.this.getActivity());
+		mListView = (GridView)view.findViewById(R.id.pull_refresh_list);
+		mListView.setAdapter(pageAdapter);
+		loadData();
 		return view;
 	}
 	
-	@Override
-	public void onActivityCreated(Bundle savedInstanceState) {
-		load(true, false);
-		super.onActivityCreated(savedInstanceState);
+	public void loadData(){
+		db = FinalDb.create(FavoriteFragment.this.getActivity());
+		List<ImageModel> objects = db.findAll(ImageModel.class);
+		pageAdapter.update(objects, false);
+		
 	}
-
-	@Override
-	public BasicPageResponse<ImageModel> parseResponse(String content) {
-		Gson gson = new Gson();
-		return gson.fromJson(content, ImageModelResponse.class);
-	}
-	
 	
 }

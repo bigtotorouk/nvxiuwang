@@ -3,6 +3,8 @@ package com.example.nvxiuwang.xlist;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.example.nvxiuwang.Constants;
 import com.example.nvxiuwang.R;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
@@ -34,7 +36,7 @@ public abstract class PageListFragment<T> extends Fragment {
 	private Map<String, Object> paramMaps = new HashMap<String, Object>();; 
 	FinalHttp finalHttp = new FinalHttp(); 
 	
-	private PullToRefreshListView mPullRefreshListView;
+	protected PullToRefreshListView mPullRefreshListView;
 	protected PageAdapter<T> _pageAdapter;
 	
 	public abstract void initParams();
@@ -102,11 +104,10 @@ public abstract class PageListFragment<T> extends Fragment {
 				// Update the LastUpdatedLabel
 				refreshView.getLoadingLayoutProxy().setLastUpdatedLabel(label);
 				if (refreshView.isHeaderShown()){ 
-					page = 1;
+					load(true, false);
 				}else{
-					
+					load(false, true);
 				}
-				load(true, false);
 			}
 		});
 
@@ -122,8 +123,13 @@ public abstract class PageListFragment<T> extends Fragment {
 	public abstract BasicPageResponse<T> parseResponse(String content);
 	
 	public void load(boolean update, boolean loadMore){
+		if(update){
+			page = 1;
+		}
 		updateEnv(paramMaps);
-		finalHttp.get(checkEnv(), new AjaxCallBack<String>(){
+		String ture_url = checkEnv();
+		Log.e(Constants.LOG	, "true_url "+ture_url);
+		finalHttp.get(ture_url, new AjaxCallBack<String>(){
 			@Override
 			public void onSuccess(String t) {
 				Log.d("bigtotoro", "result" +t);

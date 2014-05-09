@@ -4,6 +4,8 @@ package com.example.nvxiuwang.dialog;
 import org.apache.http.entity.StringEntity;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import com.example.nvxiuwang.Constants;
 import com.example.nvxiuwang.R;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -71,7 +73,7 @@ public class AccountRegisterDialog implements OnClickListener {
 		RequestParams params = new RequestParams();
 	    params.put("username", username);
 	    params.put("password", password1);
-		client.post("http://52pic.com/api/user/register", params, new AsyncHttpResponseHandler(){
+		client.post(Constants.SERVICE_URL+"api/user/register", params, new AsyncHttpResponseHandler(){
 			@Override
 			public void onSuccess(String content) {
 				try {

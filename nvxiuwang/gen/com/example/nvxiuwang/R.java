@@ -152,6 +152,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          */
         public static final int ptrSubHeaderTextAppearance=0x7f01000b;
     }
+    public static final class color {
+        public static final int font1=0x7f090002;
+        public static final int list_divider=0x7f090000;
+        public static final int white=0x7f090001;
+    }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
 
@@ -173,88 +178,147 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int back=0x7f020002;
         public static final int btn_bg_sl=0x7f020003;
         public static final int btn_bg_unsl=0x7f020004;
-        public static final int default_ptr_flip=0x7f020005;
-        public static final int default_ptr_rotate=0x7f020006;
-        public static final int favorite=0x7f020007;
-        public static final int favour_sl=0x7f020008;
-        public static final int favour_unsl=0x7f020009;
-        public static final int group=0x7f02000a;
-        public static final int hot=0x7f02000b;
-        public static final int ic_launcher=0x7f02000c;
-        public static final int indicator_arrow=0x7f02000d;
-        public static final int indicator_bg_bottom=0x7f02000e;
-        public static final int indicator_bg_top=0x7f02000f;
-        public static final int love_sl=0x7f020010;
-        public static final int love_unsl=0x7f020011;
-        public static final int mode=0x7f020012;
-        public static final int pwd_bg=0x7f020013;
-        public static final int search=0x7f020014;
-        public static final int search_body_bg=0x7f020015;
-        public static final int search_btn_bg=0x7f020016;
-        public static final int setting=0x7f020017;
-        public static final int setting_bg=0x7f020018;
-        public static final int user_bg=0x7f020019;
+        public static final int btn_favor=0x7f020005;
+        public static final int btn_ios_unsl=0x7f020006;
+        public static final int btn_like=0x7f020007;
+        public static final int btn_save=0x7f020008;
+        public static final int btn_txt_1=0x7f020009;
+        public static final int default_ptr_flip=0x7f02000a;
+        public static final int default_ptr_rotate=0x7f02000b;
+        public static final int delete=0x7f02000c;
+        public static final int favorite=0x7f02000d;
+        public static final int favorite_sl=0x7f02000e;
+        public static final int favorite_unsl=0x7f02000f;
+        public static final int favour_sl=0x7f020010;
+        public static final int favour_unsl=0x7f020011;
+        public static final int group=0x7f020012;
+        public static final int group_sl=0x7f020013;
+        public static final int group_unsl=0x7f020014;
+        public static final int home_sl=0x7f020015;
+        public static final int home_unsl=0x7f020016;
+        public static final int hot=0x7f020017;
+        public static final int hot_sl=0x7f020018;
+        public static final int hot_unsl=0x7f020019;
+        public static final int ic_launcher=0x7f02001a;
+        public static final int indicator_arrow=0x7f02001b;
+        public static final int indicator_bg_bottom=0x7f02001c;
+        public static final int indicator_bg_top=0x7f02001d;
+        public static final int like_sl=0x7f02001e;
+        public static final int like_unsl=0x7f02001f;
+        public static final int love_sl=0x7f020020;
+        public static final int love_unsl=0x7f020021;
+        public static final int mode=0x7f020022;
+        public static final int pop_spinner_bg=0x7f020023;
+        public static final int prev_bt=0x7f020024;
+        public static final int pwd_bg=0x7f020025;
+        public static final int save_sl=0x7f020026;
+        public static final int save_unsl=0x7f020027;
+        public static final int search=0x7f020028;
+        public static final int search_body_bg=0x7f020029;
+        public static final int search_btn_bg=0x7f02002a;
+        public static final int search_sl=0x7f02002b;
+        public static final int search_unsl=0x7f02002c;
+        public static final int setting=0x7f02002d;
+        public static final int setting_bg=0x7f02002e;
+        public static final int setting_sl=0x7f02002f;
+        public static final int setting_unsl=0x7f020030;
+        public static final int sp_bg=0x7f020031;
+        public static final int tab_favorite=0x7f020032;
+        public static final int tab_group=0x7f020033;
+        public static final int tab_home=0x7f020034;
+        public static final int tab_hot=0x7f020035;
+        public static final int tab_search=0x7f020036;
+        public static final int tab_setting=0x7f020037;
+        public static final int tongji_bt=0x7f020038;
+        public static final int user_bg=0x7f020039;
     }
     public static final class id {
-        public static final int action_settings=0x7f050029;
+        public static final int action_settings=0x7f05003b;
         public static final int back=0x7f05000d;
         public static final int both=0x7f050003;
         public static final int btn_login=0x7f050010;
         public static final int btn_register=0x7f050011;
+        public static final int category=0x7f05002e;
+        public static final int category1=0x7f05001f;
+        public static final int category2=0x7f050022;
         public static final int content=0x7f050013;
-        public static final int desc=0x7f050023;
+        public static final int delete=0x7f05002b;
+        public static final int desc=0x7f050032;
         public static final int disabled=0x7f050000;
-        public static final int fl_inner=0x7f050024;
+        public static final int edit_username=0x7f050027;
+        public static final int favor=0x7f050019;
+        public static final int fl_inner=0x7f050036;
         public static final int flip=0x7f050008;
         public static final int gridview=0x7f050009;
-        public static final int icon=0x7f050020;
-        public static final int img=0x7f05001f;
+        public static final int hot1=0x7f05001e;
+        public static final int hot2=0x7f050021;
+        public static final int icon=0x7f05002f;
+        public static final int img=0x7f05002a;
+        public static final int item_0=0x7f050033;
+        public static final int item_1=0x7f050034;
+        public static final int item_2=0x7f050035;
         public static final int layout_login=0x7f05000c;
+        public static final int layout_logins=0x7f050026;
+        public static final int layout_profile=0x7f050028;
+        public static final int like=0x7f05002c;
         public static final int manualOnly=0x7f050004;
-        public static final int name=0x7f050021;
+        public static final int name=0x7f050030;
         public static final int password=0x7f05000f;
-        public static final int password1=0x7f05001a;
-        public static final int password2=0x7f05001b;
+        public static final int password1=0x7f05001b;
+        public static final int password2=0x7f05001c;
         public static final int pullDownFromTop=0x7f050005;
         public static final int pullFromEnd=0x7f050002;
         public static final int pullFromStart=0x7f050001;
         public static final int pullUpFromBottom=0x7f050006;
         public static final int pull_refresh_list=0x7f050012;
-        public static final int pull_to_refresh_image=0x7f050025;
-        public static final int pull_to_refresh_progress=0x7f050026;
-        public static final int pull_to_refresh_sub_text=0x7f050028;
-        public static final int pull_to_refresh_text=0x7f050027;
-        public static final int radio_button0=0x7f050015;
-        public static final int radio_button1=0x7f050016;
-        public static final int radio_button2=0x7f050017;
-        public static final int radio_button3=0x7f050018;
-        public static final int radio_button4=0x7f050019;
+        public static final int pull_to_refresh_image=0x7f050037;
+        public static final int pull_to_refresh_progress=0x7f050038;
+        public static final int pull_to_refresh_sub_text=0x7f05003a;
+        public static final int pull_to_refresh_text=0x7f050039;
+        public static final int radio_button0=0x7f050014;
+        public static final int radio_button1=0x7f050015;
+        public static final int radio_button2=0x7f050016;
+        public static final int radio_button3=0x7f050017;
+        public static final int radio_button4=0x7f050018;
         public static final int rotate=0x7f050007;
+        public static final int save=0x7f05002d;
         public static final int scrollview=0x7f05000b;
-        public static final int search=0x7f05001e;
-        public static final int tab1=0x7f05001c;
-        public static final int tab2=0x7f05001d;
-        public static final int tabs=0x7f050014;
-        public static final int time=0x7f050022;
+        public static final int search=0x7f050024;
+        public static final int status=0x7f050029;
+        public static final int tab1=0x7f05001d;
+        public static final int tab2=0x7f050020;
+        public static final int time=0x7f050031;
+        public static final int title=0x7f05001a;
+        public static final int type=0x7f050023;
         public static final int username=0x7f05000e;
+        public static final int view_pager=0x7f050025;
         public static final int webview=0x7f05000a;
     }
     public static final class layout {
         public static final int activity_account=0x7f030000;
         public static final int activity_category=0x7f030001;
         public static final int activity_main=0x7f030002;
-        public static final int dialog_register=0x7f030003;
-        public static final int frag_favorite=0x7f030004;
-        public static final int frag_hot=0x7f030005;
-        public static final int frag_search=0x7f030006;
-        public static final int frag_setting=0x7f030007;
-        public static final int item_image=0x7f030008;
-        public static final int pull_to_refresh_header_horizontal=0x7f030009;
-        public static final int pull_to_refresh_header_vertical=0x7f03000a;
+        public static final int activity_user_image=0x7f030003;
+        public static final int dialog_register=0x7f030004;
+        public static final int frag_favorite=0x7f030005;
+        public static final int frag_group=0x7f030006;
+        public static final int frag_hot=0x7f030007;
+        public static final int frag_image_search=0x7f030008;
+        public static final int frag_search_manager=0x7f030009;
+        public static final int frag_setting=0x7f03000a;
+        public static final int frag_user_search=0x7f03000b;
+        public static final int image_display=0x7f03000c;
+        public static final int item_category=0x7f03000d;
+        public static final int item_image=0x7f03000e;
+        public static final int item_user=0x7f03000f;
+        public static final int pop_spinner=0x7f030010;
+        public static final int pull_to_refresh_header_horizontal=0x7f030011;
+        public static final int pull_to_refresh_header_vertical=0x7f030012;
+        public static final int test_demo=0x7f030013;
     }
     public static final class menu {
-        public static final int account=0x7f090000;
-        public static final int main=0x7f090001;
+        public static final int account=0x7f0a0000;
+        public static final int main=0x7f0a0001;
     }
     public static final class string {
         public static final int action_settings=0x7f070007;
@@ -292,14 +356,36 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         res/values-v11/styles.xml on API 14+ devices.
     
  API 14 theme customizations can go here. 
+
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    
+
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        
+
+        Base application theme for API 11+. This theme completely replaces
+        AppBaseTheme from res/values/styles.xml on API 11+ devices.
+    
+ API 11 theme customizations can go here. 
+
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+    
+ API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
+ Application theme. 
+ All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f080001;
         public static final int dialog=0x7f080002;
-        public static final int plat_left_tab=0x7f080003;
+        public static final int menu_tab=0x7f080003;
     }
     public static final class styleable {
         /** Attributes that can be used with a PullToRefresh.

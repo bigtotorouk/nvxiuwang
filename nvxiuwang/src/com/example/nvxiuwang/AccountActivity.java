@@ -59,7 +59,7 @@ public class AccountActivity extends Activity implements OnClickListener {
 		RequestParams params = new RequestParams();
 	    params.put("username", username);
 	    params.put("password", password);
-		client.post("http://52pic.com/api/user/login", params, new AsyncHttpResponseHandler(){
+		client.post(Constants.SERVICE_URL+"api/user/login", params, new AsyncHttpResponseHandler(){
 			@Override
 			public void onSuccess(String content) {
 				try {

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000" >
+    <com.totoro.freelancer.sdk.view.TouchImageView android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minWidth="300dp"
+        android:minHeight="400dp"
+        android:layout_margin="2dp"/>
+	<Button android:id="@+id/delete"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="top|right"
+	    android:background="@drawable/delete"/>
+	<LinearLayout android:layout_width="match_parent"
+	    android:layout_height="46dp"
+	    android:gravity="center_vertical"
+	    android:layout_gravity="bottom"
+	    android:orientation="horizontal"
+	    android:background="#44444488">
+	    <ImageView android:id="@+id/favor"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/btn_favor"
+	        android:gravity="top"
+	        android:layout_weight="1"/>
+	    <View android:layout_width="1dp"
+	        android:layout_height="match_parent" android:background="#888"/>
+	    <ImageView android:id="@+id/like"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/btn_like"
+	        android:gravity="center"
+	        android:layout_weight="1"/>
+	    <View android:layout_width="1dp"
+	        android:layout_height="match_parent" android:background="#888"/>
+	    <ImageView android:id="@+id/save"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/btn_save"
+	        android:gravity="center"
+	        android:layout_weight="1"/>
+	</LinearLayout>
+	
+</FrameLayout>

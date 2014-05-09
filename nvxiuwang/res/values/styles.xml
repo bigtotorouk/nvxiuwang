@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -28,10 +28,12 @@
 	 </style>
 	 
 	
-    <style name="plat_left_tab">
-        <item name="android:button">@null</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:layout_marginLeft">6dp</item>
-        <item name="android:layout_marginRight">6dp</item>
+    <style name="menu_tab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:gravity">center</item>
     </style>
 </resources>

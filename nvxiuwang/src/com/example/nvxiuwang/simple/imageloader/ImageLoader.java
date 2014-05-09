@@ -113,7 +113,8 @@ public class ImageLoader {
             BitmapFactory.Options o2 = new BitmapFactory.Options();
             o2.inSampleSize=scale;
             FileInputStream stream2=new FileInputStream(f);
-            Bitmap bitmap=BitmapFactory.decodeStream(stream2, null, o2);
+            //Bitmap bitmap=BitmapFactory.decodeStream(stream2, null, o2);
+            Bitmap bitmap=BitmapFactory.decodeStream(stream2);
             stream2.close();
             return bitmap;
         } catch (FileNotFoundException e) {

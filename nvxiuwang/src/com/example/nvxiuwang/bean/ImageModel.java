@@ -1,11 +1,20 @@
 package com.example.nvxiuwang.bean;
 
+import java.io.Serializable;
+
 /**
  * 图片对象实体
  * @author bing
  *
  */
-public class ImageModel {
+public class ImageModel implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6649445079512209349L;
+	/**
+	 * 
+	 */
 	private String id;
 	private String text;
 	private String thumb_pic;

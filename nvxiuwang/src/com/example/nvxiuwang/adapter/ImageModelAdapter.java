@@ -1,21 +1,25 @@
 package com.example.nvxiuwang.adapter;
 
 import android.content.Context;
-import android.media.Image;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.nvxiuwang.Constants;
+import com.example.nvxiuwang.DisplayImageActivity;
 import com.example.nvxiuwang.R;
+import com.example.nvxiuwang.UserImagesActivity;
 import com.example.nvxiuwang.bean.ImageModel;
+import com.example.nvxiuwang.dialog.ImageDisplayDialog;
 import com.example.nvxiuwang.simple.imageloader.ImageLoader;
 import com.example.nvxiuwang.xlist.PageAdapter;
 import com.totoro.freelancer.sdk.view.SquareImageView;
 
-public class ImageModelAdapter extends PageAdapter<ImageModel> {
+public class ImageModelAdapter extends PageAdapter<ImageModel> implements OnClickListener {
 	private Context context;
 	ImageLoader imageLoader;
 	
@@ -41,11 +45,17 @@ public class ImageModelAdapter extends PageAdapter<ImageModel> {
 			holder = (ViewHolder)convertView.getTag();
 		}
 		ImageModel model = objects.get(position);
-		imageLoader.DisplayImage(Constants.IMAGE_MIDDLE+model.getMiddle_pic(), holder.img);
+		String big_url = Constants.IMAGE_MIDDLE+model.getMiddle_pic();
+		imageLoader.DisplayImage(big_url, holder.img);
 		imageLoader.DisplayImage(Constants.IMAGE_AVATAR+model.getThumb_avatar(), holder.icon);
 		holder.author.setText(model.getUser_name());
 		holder.time.setText(model.getCreate_time());
 		holder.desc.setText(model.getText());
+		
+		holder.img.setOnClickListener(this);
+		holder.img.setTag(model);
+		holder.icon.setOnClickListener(this);
+		holder.icon.setTag(model);
 		return convertView;
 	}
 	
@@ -55,6 +65,27 @@ public class ImageModelAdapter extends PageAdapter<ImageModel> {
 		TextView author;
 		TextView time;
 		TextView desc;
+	}
+
+	@Override
+	public void onClick(View v) {
+		ImageModel model = (ImageModel)v.getTag();
+		if(v.getId() == R.id.img){
+			//new ImageDisplayDialog(context, url);
+			Intent imageIntent = new Intent(context, DisplayImageActivity.class);
+			Bundle mBundle = new Bundle();  
+	        mBundle.putSerializable("model",model);  
+	        imageIntent.putExtras(mBundle);  
+			context.startActivity(imageIntent);
+		}else if(v.getId() == R.id.icon){
+			Intent userIntent = new Intent(context, UserImagesActivity.class);
+			Bundle mBundle = new Bundle();  
+	        mBundle.putString("uid",model.getUid());  
+	        mBundle.putString("name",model.getUser_name());
+	        userIntent.putExtras(mBundle);  
+			context.startActivity(userIntent);
+		}
+		
 	}
 
 }

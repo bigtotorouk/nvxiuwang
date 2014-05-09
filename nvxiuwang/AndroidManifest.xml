@@ -31,6 +31,18 @@
             android:name="com.example.nvxiuwang.AccountActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.example.nvxiuwang.DisplayImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" > >
+        </activity>
+        <activity
+            android:name="com.example.nvxiuwang.UserImagesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
             android:windowSoftInputMode="stateHidden" > >
         </activity>
     </application>

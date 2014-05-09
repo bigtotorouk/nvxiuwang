@@ -101,11 +101,11 @@ public abstract class PageGridFragment<T> extends Fragment {
 				// Update the LastUpdatedLabel
 				refreshView.getLoadingLayoutProxy().setLastUpdatedLabel(label);
 				if (refreshView.isHeaderShown()){ 
-					page = 1;
+					load(true, false);
 				}else{
-					
+					load(false, true);
 				}
-				load(true, false);
+				
 			}
 		});
 
@@ -120,16 +120,21 @@ public abstract class PageGridFragment<T> extends Fragment {
 	}
 	public abstract BasicPageResponse<T> parseResponse(String content);
 	
-	public void load(boolean update, boolean loadMore){
+	public void load(final boolean update, boolean loadMore){
+		if(update){
+			page = 1;
+		}
 		updateEnv(paramMaps);
-		finalHttp.get(checkEnv(), new AjaxCallBack<String>(){
+		String requestUrl = checkEnv();
+		Log.d("bigtotoro", "requestUrl" + requestUrl);
+		finalHttp.get(requestUrl, new AjaxCallBack<String>(){
 			@Override
 			public void onSuccess(String t) {
 				Log.d("bigtotoro", "result" +t);
 				BasicPageResponse<T> response = parseResponse(t);
 				if(response.getState().equals("0")){
 					List<T> data = response.getData();
-					if(page == 1){
+					if(update){
 						_pageAdapter.update(data, false);
 					}else{
 						_pageAdapter.update(data, true);

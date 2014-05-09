@@ -5,15 +5,18 @@ package com.example.nvxiuwang;
  *
  */
 public class Constants {
+	
+	public static final String LOG = "bigtotoro";
 	public static final String SERVICE_URL = "http://52pic.com/";
 	
-	public static final String IMAGE_THUMB = "http://52pic.com/pic/thumb/";
-	public static final String IMAGE_BIG = "http://52pic.com/pic/big/";
-	public static final String IMAGE_ORIGINAL = "http://52pic.com/pic/original/";
-	public static final String IMAGE_MIDDLE = "http://52pic.com/pic/middle/";
+	public static final String IMAGE_THUMB = SERVICE_URL+"pic/thumb/";
+	public static final String IMAGE_BIG = SERVICE_URL+"pic/big/";
+	public static final String IMAGE_ORIGINAL = SERVICE_URL+"pic/original/";
+	public static final String IMAGE_MIDDLE = SERVICE_URL+"pic/middle/";
 	
-	public static final String IMAGE_AVATAR = "http://52pic.com/pic/avatar/";
+	public static final String IMAGE_AVATAR = SERVICE_URL+"pic/avatar/";
 	
 	
-	public static final String USER_ID = "";
+	public static String USER_ID = "";
+	public static String USER_NAME = "";
 }
